@@ -1,6 +1,6 @@
-# lifebox
+# LifeBOX
 
-> lifetime boxes
+> This project start with the idea to make myself much aware about how much i have achieve during a week. I consider a week is time enough to reset the routine cicle and look after your goals. Let's see what future weeks awaits for us :D
 
 ## Screenshot
 
