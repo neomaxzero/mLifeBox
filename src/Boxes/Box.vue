@@ -1,5 +1,5 @@
 <template>
-  <div class="box" @click="show" v-bind:class="{'boxFilled':passed}">
+  <div class="box" @click="show" v-bind:class="{'boxFilled':passed, 'currentWeek':actual}">
 
   </div>
 </template>
@@ -20,6 +20,14 @@ export default {
        var actualWeek = diff/1000/60/60/24/7;
        var iWeek = parseInt(actualWeek);
        return  this.index<iWeek-1;
+    },
+    actual:function(){
+      var birthday = new Date(1990,4,11);
+      var now = new Date();
+      var diff = now - birthday;
+      var actualWeek = diff/1000/60/60/24/7;
+      var iWeek = parseInt(actualWeek);
+      return  this.index===iWeek-1;
     }
   },
   data () {
@@ -53,7 +61,15 @@ export default {
       height: 10px;
       width: 10px;
   }
+  .currentWeek{
+      border-radius: 3px;
+      border: 1px solid #8AEC85;
+      background-color: #D5F4D3;
+      margin: 1px;
+      height: 10px;
+      width: 10px;
+  }
   .box:hover{
-    border: 1px solid #100;
+    border: 1px solid #8AEC85;
   }
 </style>
