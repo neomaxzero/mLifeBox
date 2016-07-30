@@ -1,6 +1,10 @@
 <template>
   <div class="chead">
+    <i class="config fa fa-cog fa-lg" aria-hidden="true"></i>
     <h1>{{ msg }}</h1>
+    <div class="">
+
+    </div>
   </div>
 </template>
 
@@ -20,7 +24,19 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1 {
+.config{
+  color: #EEE;
+}
+
+.config:hover{
+  color: #CCC;
+}
+
+.chead{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   color: #888;
 }
+
 </style>
